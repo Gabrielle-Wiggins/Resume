@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(230, 100, 100, 0.204);
+    font-family: 'Unica One', 'Courier New', courier, monospace;
+    font-size: 14px;
+    height: 100%;
+}
+.container {
+    min-height: 100vh;
+}
+.card, .container, button, .callMe, .return {
+    border-radius: 10px;
+}
+
+.container, header, main, button, .return {
+    background-color: rgb(253, 252, 252);
+}
+
+header, .projects, .callContainer, .sender {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+header {
+    padding: 10px 50px 0px 0px;
+    align-items: center;
+    margin: 0px;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+a {
+    color: rgb(102, 102, 102);
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.highlighting {
+    background-image: linear-gradient(transparent 60%, rgba(229, 183, 145, 0.404) 60%);
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition-property: background;
+}
+
+a.highlighting:hover {
+    background-size: 100% 100%;
+    transition-property: background;
+    transition-duration: 0.35s;
+    transition-timing-function: ease;
+}
+
+.myLinks {
+    transition: background .30s;
+}
+
+.myLinks:hover {
+    background: linear-gradient(45deg, #e66465, rgba(229, 183, 145, 0.404) 60%);
+    width: 100%;
+    height: 2px;
+    background-size: 100% 10%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    transform: translateY(2em);
+}
+
+h1 {
+    line-height: 120%;
+    font-weight: 300;
+}
+
+header h1 a.highlighting{
+    background-size: 70% 100%;
+}
+
+
+nav {
+    font-size: 1.2em;
+}
+
+
+main {
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+    margin: 0px;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 4em;
+    background-size: 35% 90%;
+    background-position: top center;
+}
+
+h2, .title {
+    color: #c0000073;
+    background-image: linear-gradient(transparent 60%, rgba(230, 100, 100, 0.204) 60%);
+    background-repeat: no-repeat;
+}
+.title {
+    background-size: 15% 90%;
+    background-position: top center;
+}
+h3 {
+    font-size: 2.5em;
+}
+h4 {
+    font-size: 2em;
+}
+.info {
+    margin-top: 120px;
+    background-color: rgb(214, 142, 140);
+    padding-top:50px;
+    padding-bottom: 60px;
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    margin-bottom: 50px;
+}
+.enhance {
+    color: rgb(253, 252, 252);
+}
+p, li {
+    font-size: 1.8em;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+}
+li {
+    padding: 10px;
+}
+section.card {
+    width: 80%;
+}
+.card {
+    margin: auto;
+    border: 2px solid rgb(214, 142, 140);
+    margin-top: 10px;
+    padding: 30px 0 30px 0;
+    box-shadow: 6px 6px 2px -2px rgba(73, 73, 73, 0.2);
+    max-width: 1000px;
+}
+
+article.card {
+    width: 40%;
+    padding: 10px;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+button {
+    font-family: 'Unica One', serif;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 2px 1px rgba(138, 137, 137, 0.2);
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: rgb(245, 224, 223);
+    color: rgb(214, 142, 140);
+    border: 1px solid rgb(214, 142, 140);
+}
+
+.projects {
+    margin: auto;
+    width: 70%;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.callContainer {
+    align-items: center;
+    margin: 0px;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.callMe {
+    background-color: rgb(214, 142, 140);
+    color: #fff;
+    text-align: center;
+    width: 95%;
+    max-width: 1000px;
+    margin: auto auto -72px;
+    position: relative;
+    z-index: 1;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    padding-top: 100px;
+    background-color: rgb(245, 224, 223);
+    text-align: center;
+    position: relative;
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+}
+
+button.contact {
+    background-color: rgb(214, 142, 140);
+    font-family: 'Unica One', serif;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 2px 1px rgba(138, 137, 137, 0.2);
+    color: white;
+}
+
+button.contact:hover {
+    text-decoration: none;
+    background-color: white;
+    color: rgb(214, 142, 140);
+}
+.return {
+    
+    font-family: 'Unica One', serif;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 2px 1px rgba(138, 137, 137, 0.2);
+    width: 50px;
+    height: 50px;
+}
+
+.myInfo {
+    margin-left: auto;
+    margin-right: auto;
+}
+hr {
+    width: 90%;
+    margin-top: 0;
+}
+.sender {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.senderMessage {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 20px auto 20px auto;
+}
+.senderMessage, .sender {
+    text-align: left; 
+}
+textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Unica One', serif;
+    font-size: 1em;
+    resize: none;
+    border-radius: 4px;
+}
+input {
+    font-family: 'Unica One', serif;
+    font-size: 1em;
+    width: 220px;
+    border-radius: 4px;
+}
+label {
+    font-size: 1.4em;
+}
+.senderMessage + button {
+    font-size: 1.5em;
+}
+
+::selection {
+    background-color: #c0000073;
+}
+h2::selection {
+    background-color:rgba(229, 183, 145, 0.404)
+}
+h3::selection {
+    background-color:rgba(229, 183, 145, 0.404)
+}
+
+input, textarea {
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+  
+  input:focus, textarea:focus {
+    -moz-box-shadow: 0 0 5px rgb(214, 142, 140);
+    -webkit-box-shadow: 0 0 5px rgb(214, 142, 140);
+    box-shadow: 0 0 5px rgb(214, 142, 140);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgb(214, 142, 140);
+  }
+
+
+
+
+
+/* This is a gradient font. Use for project Measurements*/
+/*
+div#logo {
+    background-color: white;
+    background-image: linear-gradient(45deg, #e66465, #9198e5);
+    background-size: 100%;
+    background-repeat: repeat;
+    display: inline;
+    box-sizing: content-box;
+    font-size: 2em;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-family: 'Permanent Marker', cursive, serif;
+}
+*/
