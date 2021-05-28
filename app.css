@@ -24,6 +24,9 @@
 .white {
     background-color: var(--white);
 }
+.shadows {
+    box-shadow: 0px 0px 15px 5px var(--shadow);
+}
 /* Individual element styling */
 body {
     background-color: var(--lightPink);
@@ -38,6 +41,8 @@ body {
     margin-right: auto;
     border-radius: .25rem;
     min-height: 100vh;
+    position: relative;
+    padding-bottom: 3rem;
 }
 header {
     align-items: center;
@@ -149,7 +154,6 @@ button {
     border-radius: .25rem;
     background-color: var(--white);
     margin-top: 1em;
-    
 }
 button:hover {
     background-color: var(--buttonBack);
@@ -165,7 +169,6 @@ section.card {
     border: 2px solid var(--dustyRose);
     margin-top: 10px;
     padding: 30px 0 30px 0;
-    box-shadow: 6px 6px 2px -2px var(--shadow);
     max-width: 1000px;
     border-radius: .35rem;
 }
@@ -191,10 +194,13 @@ article.card {
     text-align: center;
     width: 95%;
     max-width: 1000px;
-    margin: auto auto -72px;
-    position: relative;
+    max-height: 1500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
     z-index: 1;
-    display: block;
+
 }
 .callContainer {
     align-items: center;
@@ -203,7 +209,7 @@ article.card {
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    height: 144px;
+    height: 6rem;
 }
 .callContainer > h4 {
     font-size: 1.7rem;
@@ -212,7 +218,7 @@ article.card {
     font-size: 1.3rem;
 }
 footer {
-    padding-top: 126px;
+    padding-top: 6rem;
     background-color: var(--buttonBack);
     text-align: center;
     position: relative;
@@ -232,6 +238,7 @@ button.contact {
     font-size: 1.2rem;
     box-shadow: 2px 2px 2px 1px rgba(138, 137, 137, 0.2);
     color: white;
+    z-index: 1;
 }
 
 button.contact:hover {
@@ -308,6 +315,14 @@ label {
 }
 .senderMessage + button {
     font-size: 1.5rem;
+}
+.contactCard {
+    margin-bottom: 0;
+    padding-bottom: .25rem;
+}
+.contactCardFooter{
+    margin-top: 0;
+    padding-top: 1rem;
 }
 
 ::selection {
