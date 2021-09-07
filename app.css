@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: "MPLUSRounded1c-Medium";
-    src: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf');
+    src: url('Fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf');
 }
 
 .initials {
@@ -36,6 +36,8 @@ html {
   }
 #contactLogo {
     animation: none;
+    border: 2px solid var(--primary);
+    color: primary
 }
 .contactHead {
     display:inline-block;
@@ -118,7 +120,7 @@ html {
     box-shadow: 0px 0px 15px 5px var(--shadow);
 }
 body {
-    background-image: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
+    background-image: url('Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
     font-family: "MPLUSRounded1c-Medium";
     background-color: var(--white);
     height: 100%;
@@ -335,7 +337,7 @@ p {
 }
 .info {
     margin-top: 120px;
-    background-image: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
+    background-image: url('Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
     padding-top:50px;
     padding-bottom: 3rem;
     margin-left: calc(50% - 50vw);
