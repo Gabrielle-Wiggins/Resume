@@ -117,7 +117,6 @@ html {
 .shadows {
     box-shadow: 0px 0px 15px 5px var(--shadow);
 }
-/* Individual element styling */
 body {
     background-image: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
     font-family: "MPLUSRounded1c-Medium";
@@ -138,7 +137,7 @@ body {
     backface-visibility: hidden;
     animation-name: shakeMe;
     animation-duration: 6s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 5;
     animation-timing-function: linear;
     animation-delay: 8s;
 }
