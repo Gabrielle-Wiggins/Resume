@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap" rel="stylesheet">
 
     <title>Gabrielle Wiggins | Developer</title>
 </head>
 
 <body>
-    <div class="container white shadows contactCard">
-        <header class="myFlex white">
-            <h1>
-                <a href="index.html" class="highlighting">Gabrielle Wiggins</a>
-            </h1>
-            <nav>
-                <a href="index.html" class="myLinks">Home</a>
-            </nav>
+    <div class="navbar">
+        <div class="loader">
+            <a href="index.html" id="contactLogo" class="fade initials">GW</a>
+        </div>
+        <header class="myFlex">
+            <a href="index.html" class="navTwo">Home</a>
+                <a href="main.html" class="fade">About</a>
+                
+                <a href="main.html#skills" class="fade">My Stack</a> 
+                <a href="main.html#project" class="fade">View my work</a> 
+                <a href="Contact.html" class="fade current">Contact Me</a>
+            
         </header>
+    </div>
         <main>
             <section>
                 <div class="myForm">
@@ -30,14 +33,14 @@
                         <h2>Reach Out To Me</h2>
                         <div>
                             <p>Phone: 404-432-2250</p>
-                            <p>Email: gabr26@gmail.com</p>
+                            <p>Email: Gabrielle.Wiggins26@gmail.com</p>
                         </div>
 
                         <hr />
                         <h3>Send Me a Message</h3>
                         <section class="myInfo">
 
-                            <form action="">
+                            <form action="mailto:gabrielle.wiggins26@gmail.com" method="post" enctype="multipart/form-data" name="emailForm">
                                 <div class="sender myFlex">
                                     <div class="first">
                                         <label for="name">Name:</label><br />
@@ -53,7 +56,7 @@
                                     <textarea name="message" id="message" tabindex="3" rows="10"
                                         placeholder="Enter your Message" required></textarea>
                                 </div>
-                                <button type="submit" name="submit" id="sender-submit">Submit</button>
+                                <button type="submit" name="submit" id="sender-submit" value="submit">Submit</button>
                             </form>
                         </section>
 
@@ -65,7 +68,7 @@
     <footer class="contactCardFooter">
         <a href="https://github.com/Gabrielle-Wiggins" target="_blank"><button>Github</button></a>
         <a href="https://www.linkedin.com/in/gabwiggins" target="_blank"><button>LinkedIn</button></a>
-        <a href=""><button>Resume</button></a>
+        <a href="/Users/gabrielle/Gabrielle Wiggins/Resume/Media/GWiggins_Resume copy.pdf" target="_blank"><button>Resume</button></a>
         <p>Gabrielle Wiggins</p>
     </footer>
 </body>

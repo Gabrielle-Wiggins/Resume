@@ -5,35 +5,206 @@
     --gray: rgb(102, 102, 102);
     --baige: rgba(229, 183, 145, 0.404);
     --shadow: rgba(73, 73, 73, 0.2);
-    --dustyRose: rgb(214, 142, 140);
-    --buttonBack: rgb(245, 224, 223);
+    --primaryColor: #6B9B8A;
+    --buttonBack: rgba(73, 73, 73, 0.082);
+    --secondaryColor: rgb(1, 5, 25);
+    --links: #4F7366;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: "MPLUSRounded1c-Medium";
+    src: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Fonts/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf');
+}
+
+.initials {
+        display:inline-block;
+        width:6.5rem;
+        height:6.5rem;
+        line-height:6.5rem;
+        text-align:center;
+        border-radius:50%;
+        background:rgba(1, 5, 25, 0.13);
+        vertical-align:middle;
+        margin-right:6rem;
+        color:var(--secondaryColor);
+        animation: mymove 1s 1;
+
+        
+}
+html {
+    scroll-behavior: smooth;
+  }
+#contactLogo {
+    animation: none;
+}
+.contactHead {
+    display:inline-block;
+        width:6.5rem;
+        height:6.5rem;
+        line-height:6.5rem;
+        text-align:center;
+        border-radius:50%;
+        background:rgba(128, 128, 128, 0.582);
+        vertical-align:middle;
+        margin-right:6rem;
+        color:white;
+}
+.initialsTwo {
+        animation: none;
+        background:rgba(1, 5, 25, 0.13);
+        color: var(--secondaryColor);
+        display:inline-block;
+        width:6.5rem;
+        height:6.5rem;
+        line-height:6.5rem;
+        text-align:center;
+        border-radius:50%;
+        vertical-align:middle;
+        margin-right:6rem;
+}
+.navTwo {
+    color: var(--secondaryColor);
+    transition: all .35s ease-in;
+}
+.navTwo:hover {
+    color: transparent;
+   text-shadow: 0 0 2px rgba(1, 5, 25, 0.61);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    width: 100%;
+    align-items: baseline;
+    background-color: rgba(128, 128, 128, 0.247);
+    padding: .5rem 0 .5rem 0;
+}
+.container > .navbar {
+    background-color: var(--white);
+}
+.container > .myFlex > a {
+    color: black;
 }
 
 .myFlex {
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 0 auto;
+    padding-right: 5rem;
+    width: 70%;
 }
+.myFlexTwo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 0 auto;
+    width: 70%;
+    
+}
+.loader {
+    width: 30%;
+    color: var(--primaryColor);
+    padding-left: 5.5rem;
+    font-size: 4rem;
+    margin: 0;
+}
+
 .white {
     background-color: var(--white);
+
 }
 .shadows {
     box-shadow: 0px 0px 15px 5px var(--shadow);
 }
 /* Individual element styling */
 body {
-    background-color: var(--lightPink);
-    font-family: 'Unica One', Helvetica, sans-serif;
+    background-image: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
+    font-family: "MPLUSRounded1c-Medium";
+    background-color: var(--white);
     height: 100%;
     margin: .4rem .5rem .4rem .5rem;
     font-size: 1.6rem;
+    margin: 0;
+}
+.alignment {
+    text-align: center;
+}
+.name {
+    color: var(--primaryColor);
+}
+.shake {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    animation-name: shakeMe;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 8s;
+}
+
+@keyframes shakeMe {
+    2%, 18% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    4%, 16% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    6%, 10%, 14% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    8%, 12% {
+        transform: translate3d(5px, 0, 0);
+    }
+    
+    18.1% {
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+  
+
+.credit {
+    font-size: 1rem;
+    color: var(--white);
+    margin-left: 5px;
+}
+.credit > a {
+    color: var(--white);
+}
+.content {
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.introduction {
+    color: var(--secondaryColor);
+    font-size: 4rem;
+    animation: animated-text 4s steps(30,end) 1s 1 normal both;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.introductionTwo {
+    color: var(--secondaryColor);
+    font-size: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: animated-text 4s steps(30,end) 4s 1 normal both;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+@keyframes animated-text {
+    from{width: 0;}
+    to{width: 100%;}
+}
+@keyframes mymove {
+    100% {transform: rotate(360deg);}
 }
 .container {
     align-items: center;
@@ -42,7 +213,7 @@ body {
     border-radius: .25rem;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 3rem;
+    padding: 0 1rem 3rem 1rem;
 }
 header {
     align-items: center;
@@ -51,9 +222,35 @@ header {
     text-decoration: none;
     padding-top: 2em;
 }
+
+
 a {
     color: var(--gray);
     text-decoration: none;
+    
+}
+.myFlex > a {
+    color: var(--secondaryColor);
+}
+
+a.fade { 
+    color: var(--secondaryColor);
+    transition: all .35s ease-in;
+    
+}
+
+.fade:hover {
+    color: transparent;
+   text-shadow: 0 0 2px rgba(1, 5, 25, 0.411);
+   
+}
+a.linkTwo {
+    color: var(--links);
+    transition: all .35s ease;
+}
+.linkTwo:hover {
+    color: transparent;
+   text-shadow: 0 0 2px rgba(79, 115, 102, 0.705);
 }
 
 h1 {
@@ -65,14 +262,26 @@ h1 {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 60% 100%;
-    transition: background .35s;
+    transition: all .35s;
 }
 a.highlighting:hover {
+    background-size: 100% 100%;
+}
+a.current {
+    background-image: linear-gradient(transparent 65%, rgba(107, 155, 138, 0.281) 60%);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 70% 95%;
+    transition: all .35s;
+}
+a.current:hover {
+    
     background-size: 100% 100%;
 }
 
 .myLinks {
     transition: background .30s;
+    color: var(--primaryColor);
 }
 .myLinks:hover {
     background: linear-gradient(45deg, #e66465, var(--baige) 60%);
@@ -81,6 +290,7 @@ a.highlighting:hover {
     background-size: 100% 10%;
     background-repeat: no-repeat;
     background-position: bottom center;
+    
 }
 main {
     padding: 10px 0px 0px 0px;
@@ -97,8 +307,8 @@ h2 {
     margin-top: 2em;
 }
 h2, .title {
-    color: var(--darkPink);
-    background-image: linear-gradient(transparent 60%, rgba(230, 100, 100, 0.204) 60%);
+    color: var(--primaryColor);
+    background-image: linear-gradient(transparent 60%, rgba(107, 155, 138, 0.281) 60%);
     background-repeat: no-repeat;
 }
 .title {
@@ -125,15 +335,16 @@ p {
 }
 .info {
     margin-top: 120px;
-    background-color: var(--dustyRose);
+    background-image: url('/Users/gabrielle/Gabrielle Wiggins/Resume/Images/olga-serjantu--wVnHkiVmm8-unsplash.jpg');
     padding-top:50px;
-    padding-bottom: 60px;
+    padding-bottom: 3rem;
     margin-left: calc(50% - 50vw);
     width: 100vw;
     margin-bottom: 50px;
+    color: var(--secondaryColor);
 }
 .enhance {
-    color: var(--white);
+    color: var(--primaryColor);
 }
 
 ul {
@@ -145,7 +356,7 @@ li {
     padding: 10px;
 }
 button {
-    font-family: 'Unica One', serif;
+    font-family: 'MPLUSRounded1c-Medium', serif;
     cursor: pointer;
     padding: .5rem;
     font-size: 1.2rem;
@@ -154,43 +365,42 @@ button {
     border-radius: .25rem;
     background-color: var(--white);
     margin-top: 1em;
+    transition: all .75s ease;
 }
 button:hover {
     background-color: var(--buttonBack);
-    color: var(--dustyRose);
-    border: 1px solid var(--dustyRose);
-    transition: .35s;
-}
-section.card {
-    width: 80%;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
 }
 .card {
     margin: auto;
-    border: 2px solid var(--dustyRose);
+    border: 2px solid var(--primaryColor);
     margin-top: 10px;
     padding: 30px 0 30px 0;
     max-width: 1000px;
     border-radius: .35rem;
+    background-color: white;
 }
 article.card {
-    width: 40%;
+    width: 50%;
     padding: 10px;
-    max-width: 500px;
-    min-width: 200px;
+    max-width: 600px;
+    min-width: 300px;
 }
 .projects {
     margin: auto;
-    width: 70%;
+    width: 80%;
     margin-bottom: 100px;
     flex-wrap: wrap;
 }
 #project {
     margin-top: 3rem;
 }
+
 .callMe {
-    background-color: var(--dustyRose);
+    background-color: var(--white);
     border-radius: .35rem;
-    color: var(--white);
+    color: var(--primaryColor);
     text-align: center;
     width: 95%;
     max-width: 1000px;
@@ -204,12 +414,13 @@ article.card {
 }
 .callContainer {
     align-items: center;
-    margin: 0px;
+    margin: 0;
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
-    height: 6rem;
+    height: 7rem;
+    padding: 0;
 }
 .callContainer > h4 {
     font-size: 1.7rem;
@@ -219,7 +430,7 @@ article.card {
 }
 footer {
     padding-top: 6rem;
-    background-color: var(--buttonBack);
+    color: var(--white);
     text-align: center;
     position: relative;
     margin-left: calc(50% - 50vw);
@@ -229,9 +440,10 @@ footer > p {
     margin-top: .5rem;
 }
 
+
 button.contact {
-    background-color: rgb(214, 142, 140);
-    font-family: 'Unica One', serif;
+    background-color: var(--primaryColor);
+    font-family: 'MPLUSRounded1c-Medium', serif;
     border: 1px solid white;
     margin-top: 0;
     cursor: pointer;
@@ -239,15 +451,17 @@ button.contact {
     box-shadow: 2px 2px 2px 1px rgba(138, 137, 137, 0.2);
     color: white;
     z-index: 1;
+    transition: all .5s ease;
 }
 
 button.contact:hover {
     text-decoration: none;
     background-color: white;
-    color: var(--dustyRose);
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
 }
 .return {
-    font-family: 'Unica One', serif;
+    font-family: 'MPLUSRounded1c-Medium', serif;
     cursor: pointer;
     padding: 5px;
     font-size: 1.2em;
@@ -269,6 +483,7 @@ hr {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
 }
 .card > h2 {
     margin-top: 2rem;
@@ -279,6 +494,7 @@ hr {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .senderMessage {
     width: 50%;
@@ -293,22 +509,22 @@ textarea {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    font-family: 'Unica One', serif;
+    font-family: 'MPLUSRounded1c-Medium', serif;
     font-size: 1rem;
     resize: none;
     border-radius: 4px;
 }
 input {
-    font-family: 'Unica One', serif;
+    font-family: 'MPLUSRounded1c-Medium', serif;
     font-size: 1rem;
     width: 100%;
     border-radius: 4px;
 }
 .first {
-    width: 48%;
+    width: 45%;
 }
 .second{
-    width: 48%;
+    width: 45%;
 }
 label {
     font-size: 1.4rem;
@@ -326,13 +542,13 @@ label {
 }
 
 ::selection {
-    background-color: var(--darkPink);
+    background-color: var(--links);
 }
 h2::selection {
-    background-color: var(--baige);
+    background-color: var(--links);
 }
 h3::selection {
-    background-color:var(--baige);
+    background-color:var(--links);
 }
 
 input, textarea {
@@ -347,25 +563,184 @@ input, textarea {
   }
   
   input:focus, textarea:focus {
-    -moz-box-shadow: 0 0 5px var(--dustyRose);
-    -webkit-box-shadow: 0 0 5px var(--dustyRose);
-    box-shadow: 0 0 5px var(--dustyRose);
+    -moz-box-shadow: 0 0 5px var(--primaryColor);
+    -webkit-box-shadow: 0 0 5px var(--primaryColor);
+    box-shadow: 0 0 5px var(--primaryColor);
     padding: 3px 0px 3px 3px;
     margin: 5px 1px 3px 0px;
-    border: 1px solid var(--dustyRose);
+    border: 1px solid var(--primaryColor);
   }
+
+  
 
 
 /* --------------- MEDIA QUERIES --------------- */
 /* Small devices */
-@media (max-width: 670px) {
+@media (max-width: 893px) {
+    .initials {
+        width:4.5rem;
+        height:4.5rem;
+        line-height:4.5rem;
+        vertical-align:middle;
+        margin-right:6rem;
+        animation: mymove 0s 0;
+    }
+    .initialsTwo {
+        width:4.5rem;
+        height:4.5rem;
+        line-height:4.5rem;
+        vertical-align:middle;
+        margin-right:6rem;
+        animation: mymove 0s 0;
+    }
+    .myFlex > a {
+        font-size: 1rem;
+    }
+    h2, .title {
+        background-image: none;
+        background-repeat: no-repeat;
+    }
+    .contactHead {
+        width:4.5rem;
+        height:4.5rem;
+        line-height:4.5rem;
+        vertical-align:middle;
+        margin-right:6rem;
+    }
+    .loader  {
+        font-size: 2rem;
+    }
+    .introduction {
+        font-size: 3rem;
+    }
+    .introductionTwo {
+        font-size: 2.8rem;
+    }
+    .loader {
+        max-width: 25%;
+    }
+}
+@media (max-width: 600px) {
     html {
-        font-size: .5rem;
+        font-size: .75rem;
     }
     .callContainer {
         max-width: 540px;
     }
+    .loader {
+        font-size: 2rem;
+    }
+    .introduction {
+        font-size: 3rem;
+    }
+    .arrow {
+        width: 8px;
+    }
+    .loader {
+        max-width: 15%;
+    }
+    
 }
+@media (max-width: 700px) {
+    .myFlex > a {
+        font-size: 1.5rem;
+        text-align: right;
+        padding: 5px;
+    }
+    .myFlex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .navbar {
+        justify-content: space-between;
+        text-align: right;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+       
+    }
+    a.current {
+        background-image: none;
+        text-decoration: 4px underline;
+        text-decoration-color: var(--primaryColor);
+    }
+}
+
+
+
+@media (max-width: 360px) {
+    
+    .introduction {
+        animation: none;
+        white-space: normal;
+    }
+    .introductionTwo {
+        animation: none;
+        white-space: normal;
+    }
+    
+    .about > h2 {
+        font-size: 3rem;
+        margin-top: 0px;
+    }
+    .about > h3 {
+        font-size: 3rem;
+    }
+    
+   
+    .initials {
+        width:3.5rem;
+        height:3.5rem;
+        line-height:3.5rem;
+        vertical-align:middle;
+        margin: 1rem 2rem 0rem 1rem;
+    }
+    .initialsTwo {
+        width:3.5rem;
+        height:3.5rem;
+        line-height:3.5rem;
+        vertical-align:middle;
+        margin: 1rem 2rem 0rem 1rem;
+    }
+    article.card {
+        width: 50%;
+        padding: 10px;
+        min-width: 180px;
+    }
+    h4.banner {
+        margin: 0;
+        font-size: 1.2rem;
+    }
+    p.banner {
+        font-size: 1.2rem;
+    }
+    .callContainer {
+        width: 90%;
+        padding: 0px;
+    }
+    button.contact {
+        font-size: .75rem;
+    }
+    .loader {
+        padding: .25rem 0 0 0;
+    }
+    .myFlex {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 495px) {
+    
+    .introduction {
+        font-size: 2.5rem;
+    }
+    .introductionTwo {
+        font-size: 2.2rem;
+    }
+    
+}
+
+/*min width*/
 @media (min-width: 1200px) {
     .callContainer {
         max-width: 1140px;
@@ -381,3 +756,4 @@ input, textarea {
         max-width: 720px;
     }
 }
+
